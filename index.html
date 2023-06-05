@@ -292,11 +292,11 @@
         $(`<input type="text" id="inputAnswerDescription" class="longTextInput" placeholder="Answer">`),
         $("<br>"),$("<br>"),$("<br>"),
         $("<h3>Explain your answer...</h3>"),
-        $("<p><b>Paragraph 1:</b> While explaining your answer, " + selectedDiscussion.PW + " <i>(This module's PW learning objective)</i></p>"),
+        $("<p><b>Paragraph 1:</b> While explaining your answer, meet this module's PW learning objective: " + selectedDiscussion.PW + "</p>"),
         $(`<textarea class="textArea" id="pwExplain" rows="10" cols="80" placeholder="Paragraph 1"></textarea>`).on('input', updateLongAnswerWordCount),
         
         $("<br>"),$("<br>"),$("<br>"),
-        $("<p><b>Paragraph 2:</b> While explaining your answer, " + selectedDiscussion.GED + " <i>(This module's GED learning objective)</i></p>"),
+        $("<p><b>Paragraph 2:</b> While explaining your answer, meet this module's GED learning objective: " + selectedDiscussion.GED + "</p>"),
         $(`<textarea class="textArea" id="gedExplain" rows="10" cols="80" placeholder="Paragraph 2"></textarea>`).on('input', updateLongAnswerWordCount),
         $("<br>"),$("<br>"),$("<br>"),
         $("<h3>Final step...</h3>"),
