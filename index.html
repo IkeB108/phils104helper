@@ -1,5 +1,5 @@
 <html>
-<!-- v2.4 -->
+<!-- v2.5 -->
 <head>
   <meta charset="UTF-8">
   <title>📎PHIL 104 DB Assistant</title>
@@ -9,7 +9,7 @@
 
 <script>
 
-  let discussionData = {
+let discussionData = {
     "1": {
       "longReplyDueDate": "Jun 7 2023",
       "targetQuestion": "Are There Universal Ethical Principles That Should Govern the Conduct of Medicine and Research Worldwide?",
@@ -292,11 +292,11 @@
         $(`<input type="text" id="inputAnswerDescription" class="longTextInput" placeholder="Answer">`),
         $("<br>"),$("<br>"),$("<br>"),
         $("<h3>Explain your answer...</h3>"),
-        $("<p><b>Paragraph 1:</b> While explaining your answer, meet this module's PW learning objective: " + selectedDiscussion.PW + "</p>"),
+        $("<p><b>Paragraph 1:</b> While explaining your answer, meet this module's PW learning objective: <i>" + selectedDiscussion.PW + "</i></p>"),
         $(`<textarea class="textArea" id="pwExplain" rows="10" cols="80" placeholder="Paragraph 1"></textarea>`).on('input', updateLongAnswerWordCount),
         
         $("<br>"),$("<br>"),$("<br>"),
-        $("<p><b>Paragraph 2:</b> While explaining your answer, meet this module's GED learning objective: " + selectedDiscussion.GED + "</p>"),
+        $("<p><b>Paragraph 2:</b> While explaining your answer, meet this module's GED learning objective: <i>" + selectedDiscussion.GED + "</i></p>"),
         $(`<textarea class="textArea" id="gedExplain" rows="10" cols="80" placeholder="Paragraph 2"></textarea>`).on('input', updateLongAnswerWordCount),
         $("<br>"),$("<br>"),$("<br>"),
         $("<h3>Final step...</h3>"),
@@ -394,7 +394,7 @@
     let appendToReplyDiv = [
       $("<br>"),$("<br>"),$("<br>"),
       $("<h2></h2>").text("Discussion " + selectedDiscussionIndex + ": Medium Reply").attr("id","longReplyHeader"),
-      $("<p>Respond to a peer's long post. Note: for each discussion, you must write one medium reply with each of the three approaches (A, B, and C).</p>"),
+      $("<p>Respond to a peer's long post. <b>NOTE:</b> For each discussion, you must write one medium reply with each approach.</p>"),
       $(`<label for="peerName">Peer Name: </label>`),
       $(`<input id="peerName" type="text" class="input-lg"></input>`),
       newDropdownDiv("approachDiv", "Choose an approach: ", approachChoices),
@@ -505,7 +505,11 @@
 <body>
   
   <h1>📎Phil 104 Discussion Board Helper</h1>
-  <p>This website guides you step-by-step for writing Discussion posts for Phil 104: just fill in all the boxes, and it will format your post for you, according to Prof. DiSilvestro's instructions. It also provides helpful information specific to each discussion board, such as the discussion board's target question and learning objectives. <b>Warning:</b> this website does not save your progress. Please send questions and feedback to ikebischof@csus.edu</p>
+  <p class="inline">This website guides you step-by-step for writing Discussion posts for Phil 104: just fill in all the boxes, and it will format your post for you, according to Prof. DiSilvestro's instructions. It also provides helpful information specific to each discussion board, such as the discussion board's target question and learning objectives. <b>Warning:</b> this website does not save your progress. Please send questions and feedback to </p>
+  <a href="mailto:ikebischof@csus.edu">ikebischof@csus.edu.</a>
+  <p class="inline">Also: here is a</p>
+  <a href="https://youtube.com/playlist?list=PL0CCfiyziDl-InsNuE2Cl4adL0EYR_Wu6" target="_blank" class="inline">YouTube playlist of all lecture videos.</a>
+  <br><br>
   <form id="mainForm">
     <label for="studentName">Your Name:</label>
     <input type="text" id="studentName" class="input-lg">
@@ -518,7 +522,7 @@
     margin: 30px;
   }
 
-  p, h1, h2, h3, label {
+  p, h1, h2, h3, label, a {
     word-wrap: break-word;
     font-family: sans-serif;
   }
@@ -530,6 +534,10 @@
   .textArea {
     line-height: 1;
     font-family: sans-serif;
+  }
+  
+  .inline {
+    display: inline;
   }
 </style>
 
